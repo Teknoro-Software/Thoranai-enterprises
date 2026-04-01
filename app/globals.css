@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
+/* 🎨 BRAND PALETTE */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-main: #F1E4DB;
+  --bg-soft: #D2CADF;
+
+  --accent: #E1A49A;
+  --primary: #92333C;
+
+  --dark: #372937;
+  --text: #2A1F2D;
 }
 
+/* Tailwind mapping */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-main: var(--bg-main);
+  --color-bg-soft: var(--bg-soft);
+
+  --color-accent: var(--accent);
+  --color-primary: var(--primary);
+
+  --color-dark: var(--dark);
+  --color-text: var(--text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 🌍 GLOBAL */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-main);
+  color: var(--text);
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* 💎 PREMIUM CARD */
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(146, 51, 60, 0.08);
+  padding: 20px;
+}
+
+/* ✨ HOVER CARD */
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(146, 51, 60, 0.15);
+}
+
+/* 🔘 BUTTON */
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--dark);
+}
+
+/* 🧾 INPUT */
+.input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  background: #FAFAFA;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(146, 51, 60, 0.15);
+}
+
+/* ✨ SMOOTH UI */
+* {
+  transition: all 0.25s ease;
+}
+
+.input4 {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+
+  background: #F9FAFB;
+  /* light visible bg */
+  border: 1.5px solid #D1D5DB;
+
+  font-size: 15px;
+  color: #111827;
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* placeholder */
+.input4::placeholder {
+  color: #6B7280;
+}
+
+/* hover */
+.input4:hover {
+  border-color: #9CA3AF;
+}
+
+/* focus */
+.input4:focus {
+  background: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(199, 110, 46, 0.2);
 }
