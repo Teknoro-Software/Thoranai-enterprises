@@ -1,37 +1,67 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Factory, Globe, Layers, Package, Scissors, Shirt, Sparkles, Truck } from "lucide-react";
 
 const services = [
   {
     title: "Wholesale Fabrics",
     image: "https://images.unsplash.com/photo-1603252109303-2751441dd157",
-    icon: "🧵",
+    icon: Shirt,
   },
   {
-    title: "Retail Collections",
+    title: "Retail Fabric Sales",
     image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b",
-    icon: "👗",
+    icon: Layers,
   },
   {
-    title: "Custom Tailoring",
-    image: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0",
-    icon: "🪡",
-  },
-  {
-    title: "Premium Materials",
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
-    icon: "🧥",
+    title: "Fabric Export",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+    icon: Globe,
   },
   {
     title: "Bulk Orders",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
-    icon: "📦",
+    image: "/images/bulk.jpg",
+    icon: Package,
+  },
+
+  {
+    title: "Cotton Threads",
+    image: "/images/cotton.jpg",
+    icon: Scissors,
   },
   {
-    title: "Fashion Supply",
+    title: "Polyester Threads",
+    image: "/images/poly.jpg",
+    icon: Factory,
+  },
+  {
+    title: "Silk Threads",
+    image: "/images/silk.jpg",
+    icon: Sparkles,
+  },
+
+  // 🧥 FABRICS TYPES
+  {
+    title: "Denim Fabrics",
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    icon: Layers,
+  },
+  {
+    title: "Silk Fabrics",
+    image: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0",
+    icon: Shirt,
+  },
+
+  {
+    title: "Custom Fabric Orders",
+    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+    icon: Scissors,
+  },
+  {
+    title: "Fashion Supply Chain",
     image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d",
-    icon: "✨",
+    icon: Truck,
   },
 ];
 
@@ -97,7 +127,7 @@ export default function ServicesPage() {
 
                 {/* ICON */}
                 <div className="absolute bottom-[-20px] left-5 bg-[#92333C] text-white p-3 rounded shadow text-lg">
-                  {item.icon}
+                  <item.icon className="w-5 h-5" />
                 </div>
               </div>
 

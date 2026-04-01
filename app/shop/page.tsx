@@ -117,7 +117,13 @@ export default function ShopPage() {
                     image: product.image,
                   })
                 }
-                className="absolute bottom-0 left-0 w-full bg-[#92333C] text-black text-sm py-3 translate-y-full group-hover:translate-y-0 transition duration-300"
+                className="
+  absolute bottom-0 left-0 w-full 
+  bg-[#92333C] text-white text-sm py-3 
+  translate-y-0 md:translate-y-full 
+  md:group-hover:translate-y-0 
+  transition duration-300
+"
               >
                 ADD TO CART
               </button>
